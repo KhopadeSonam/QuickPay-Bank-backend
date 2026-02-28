@@ -53,6 +53,9 @@ public class AuthService {
         return AuthResponse.builder()
                 .token(token)
                 .message("Login successful")
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
                 .build();
     }
 
